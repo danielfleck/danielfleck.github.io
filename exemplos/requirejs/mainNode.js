@@ -1,11 +1,14 @@
+// atribui a variavel requirejs o objeto do módulo requirejs
 var requirejs = require('requirejs');
 
+// configura o requirejs
 requirejs.config({
 	baseUrl: "app/scripts",
+	// esta configuração abaixo é importante
 	nodeRequire: require
 })
 
-//console.log(requirejs);
+// Executa algo que tem como dependencia o código contido em Ocorrencia.js e logger.js
 requirejs(['Ocorrencia', 'logger'],function(ocr,logger){
 
 	logger.logar(ocr);
