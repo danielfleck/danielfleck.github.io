@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif; 
+    font-size: 12pt;
+}
+
+/* Estilo para elementos com a classe 'titulo' */
+.titulo {
+    font-family: Arial, sans-serif; 
+    font-size: 12pt;              
+    font-weight: bold;            
+    text-transform: uppercase; 
+}
