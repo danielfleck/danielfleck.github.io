@@ -54,3 +54,9 @@ a:visited {
     text-decoration: none; /* Remove o sublinhado padrão do link */
     color: #6610f2; /* Um tom de roxo/magenta para links visitados (opcional, pode ser o mesmo do padrão) */
 }
+
+blockquote {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.0;
+    font-style: italic;
+}
