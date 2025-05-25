@@ -1,12 +1,56 @@
 body {
-    font-family: Arial, sans-serif; 
-    font-size: 12pt;
+    font-family: 'Georgia', serif; 
+    font-size: 1.15em;
+    line-height: 1.6;
+}
+
+.titulo-principal {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#87CEEB, #1E90FF);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para elementos com a classe 'titulo' */
-.titulo {
-    font-family: Arial, sans-serif; 
-    font-size: 12pt;              
+.titulo {         
     font-weight: bold;            
     text-transform: uppercase; 
+    background-image: linear-gradient(#87CEEB, #1E90FF);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto {
+
+    margin: 0;
+    padding: 20px;
+
+}
+
+a {
+    color: #007bff; /* Azul vibrante (um tom de azul comum para links) */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    font-weight: 500; /* Deixa o texto um pouco mais encorpado, mas não negrito total */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+/* Estilo para links quando o mouse passa por cima (hover) */
+a:hover {
+    color: #0056b3; /* Um tom de azul mais escuro ao passar o mouse */
+    text-decoration: underline; /* Adiciona o sublinhado de volta ao passar o mouse */
+}
+
+/* Estilo para links quando estão sendo clicados (active) */
+a:active {
+    color: #003e80; /* Um azul ainda mais escuro para o momento do clique */
+}
+
+/* Estilo para links que já foram visitados (visited) */
+a:visited {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    color: #6610f2; /* Um tom de roxo/magenta para links visitados (opcional, pode ser o mesmo do padrão) */
 }
