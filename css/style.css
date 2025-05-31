@@ -1,7 +1,20 @@
+/* Definição das variáveis de cores da paleta */
+:root {
+            --azul-marinho-profundo: #141464;
+            --azul-agua-profundo: #1E5A64;
+            --azul-agua-profundo-escuro: #194B55;            
+            --verde-oliva-acinzentado: #5A5F46;
+            --verde-oliva-acinzentado-escuro: #4B503C;
+            --bordo-sobrio: #641432;
+            --bordo-sobrio-escuro: #550F28;
+            --cinza-quente: #AAA096;
+}
+
 body {
-    font-family: 'Georgia', serif; 
+    font-family: 'Roboto', sans-serif; 
     font-size: 1.15em;
     line-height: 1.6;
+    margin: 0;
 }
 
 .titulo-principal {
@@ -10,17 +23,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(#87CEEB, #1E90FF);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('../imagens/fundo2.png');
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: cover; 
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    background-color: var(--azul-agua-profundo);
 }
+
 
 /* Estilo para elementos com a classe 'titulo' */
 .titulo {         
     font-weight: bold;            
     text-transform: uppercase; 
     background-image: linear-gradient(#87CEEB, #1E90FF);
-    border-radius: 4px;
+    /* border-radius: 4px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,8 +46,10 @@ body {
 
     margin: 0;
     padding: 20px;
+    text-indent: 2em;
 
 }
+
 
 a {
     color: #007bff; /* Azul vibrante (um tom de azul comum para links) */
@@ -60,3 +80,92 @@ blockquote {
     line-height: 1.0;
     font-style: italic;
 }
+
+.container-flex {
+            display: flex; /* Essencial para o Flexbox */
+            justify-content: space-between; /* Distribui o espaço entre os itens */
+            align-items: flex-start; /* Alinha os itens ao topo, se tiverem alturas diferentes */
+            gap: 15px; /* Espaçamento entre os itens (suportado por navegadores modernos) */
+            padding: 20px;
+            border: 2px solid #ccc;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas menores */
+            max-width: 100%; /* Limita a largura do contêiner */
+        }
+
+.box {
+            flex: 1; /* Permite que os itens cresçam e encolham para preencher o espaço */
+            min-width: 150px; /* Largura mínima para cada div antes de quebrar a linha */
+            height: 120px; /* Altura de cada div */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+ }
+
+ /* Cores de exemplo para cada box */
+        .box:nth-child(1) { 
+            background-color: var(--azul-marinho-profundo);
+            color: var(--cinza-quente);
+         }
+        .box:nth-child(2) { 
+            background-color: var(--azul-agua-profundo);
+            color: var(--cinza-quente);
+         }
+        .box:nth-child(3) { 
+            background-color: var(--verde-oliva-acinzentado);
+            color: var(--cinza-quente);
+         }
+        .box:nth-child(4) { 
+            background-color: var(--bordo-sobrio);
+            color: var(--cinza-quente);
+         }
+        .box:nth-child(5) { 
+            background-color: var(--cinza-quente);
+            color: var(--azul-marinho-profundo);
+         }
+
+        /* Estilos para o elemento de navegação principal */
+        nav {
+            background-color: var(--azul-agua-profundo); /* Cor de fundo do menu */
+            padding: 10px 0; /* Espaçamento interno superior e inferior */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave para destaque */
+        }
+
+        /* Estilos para a lista não ordenada dentro do nav */
+        nav ul {
+            list-style: none; /* Remove os marcadores de lista */
+            margin: 0; /* Remove a margem padrão */
+            padding: 0; /* Remove o preenchimento padrão */
+            display: flex; /* Transforma a lista em um contêiner flexível */
+            justify-content: start; /* Centraliza os itens horizontalmente */
+            gap: 20px; /* Espaçamento entre os itens do menu (navegadores modernos) */
+        }
+
+        /* Estilos para os itens da lista */
+        nav ul li {
+            /* flex-grow: 1; */ /* Opcional: faz com que os itens preencham o espaço igualmente */
+            text-align: center;
+        }
+
+        /* Estilos para os links dentro dos itens da lista */
+        nav ul li a {
+            display: block; /* Faz o link ocupar todo o espaço do li */
+            color: white; /* Cor do texto do link */
+            text-decoration: none; /* Remove o sublinhado padrão */
+            padding: 8px 15px; /* Espaçamento interno para os links */
+            border-radius: 5px; /* Bordas arredondadas nos links */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o hover */
+        }
+
+        /* Estilos para o link ao passar o mouse (hover) */
+        nav ul li a:hover,
+        nav ul li a.active { /* Exemplo de classe 'active' para o item da página atual */
+            background-color: var(--azul-agua-profundo-escuro); /* Cor de fundo ao passar o mouse */
+            color: #f0f0f0;
+        }
