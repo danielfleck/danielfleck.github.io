@@ -1,0 +1,19 @@
+function Obj(nome) {
+    this.nome = nome;
+
+    this.exec = function() {
+        console.log('Exec ' + this.nome);
+    };
+}
+
+o1 = new Obj('obj1');
+
+o2 = new Obj('obj2');
+
+o1.exec();
+
+o1.nome = 'obj1 alterado';
+
+o1.exec();
+
+o2.exec();

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+</head>
+<body>
+    <video id="meuvideo" preload="metadata" controls autoplay>
+        <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+        Seu navegador não suporta videos.
+    </video>
+
+    <p><button id="teclaplay">&gt;</button>&nbsp;<button id="teclapause">||</button></p>
+    <p>Duração: <span id="atual">Carregando...</span> / <span id="duracao">Carregando...</span></p>
+    <p><progress id="progresso" value="0" max="100" style="width: 1000px;"></progress></p>
+
+    <script>
+        const video = document.getElementById('meuvideo')
+        const play = document.getElementById('teclaplay')
+        const pause = document.getElementById('teclapause')
+
+        play.onclick = (e) => {
+            video.play()
+        }
+
+        pause.onclick = (e) => {
+            video.pause()
+        }
+
+        video.addEventListener('loadedmetadata', () => {
+            const duracaoEmSegundos = video.duration;
+
+            // Formatar a duração para um formato mais legível (minutos:segundos)
+            const minutos = Math.floor(duracaoEmSegundos / 60);
+            const segundos = Math.floor(duracaoEmSegundos % 60);
+
+            const duracaospan = document.getElementById('duracao')
+
+            duracaospan.textContent = `${minutos}:${segundos.toString().padStart(2, '0')}`
+        })
+
+        video.addEventListener('timeupdate', () => {
+              let atual = video.currentTime
+
+            const atualspan = document.getElementById('atual')
+
+            const minutos = Math.floor(atual / 60);
+            const segundos = Math.floor(atual % 60);
+
+            atualspan.textContent = `${minutos}:${segundos.toString().padStart(2, '0')}`
+
+            const progresso = document.getElementById("progresso")
+            progresso.value = (atual/video.duration)*100
+        })
+
+        // setInterval(() => {
+        //     let atual = video.currentTime
+
+        //     const atualspan = document.getElementById('atual')
+
+        //     const minutos = Math.floor(atual / 60);
+        //     const segundos = Math.floor(atual % 60);
+
+        //     atualspan.textContent = `${minutos}:${segundos.toString().padStart(2, '0')}`
+
+        //     const progresso = document.getElementById("progresso")
+        //     progresso.value = (atual/video.duration)*100
+        // }, 100)
+
+        video.addEventListener('contextmenu', (e) => {
+      // Previne a ação padrão do evento, que é mostrar o menu de contexto
+            e.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

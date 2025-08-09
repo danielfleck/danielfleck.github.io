@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício listas aninhadas</title>
+</head>
+<body>
+        <h1>Desafio</h1>
+
+        <ul>
+            <li><span wm-folder>Backend</span>
+                <ul>
+                    <li><span wm-folder>App</span>
+                        <ul>
+                            <li>produto.js</li>
+                            <li>usuario.js</li>
+                            <li>produto.js</li>
+                        </ul>
+                    </li>
+                    <li><span wm-folder>Config</span>
+                        <ul>
+                            <li>banco.js</li>
+                            <li>rotas.js</li>
+                            <li>servidor.js</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><span wm-folder>Frontend</span>
+                <ul>
+                    <li><span wm-folder>public</span>
+                        <ul>
+                            <li>app.css</li>
+                            <li>app.js</li>
+                            <li>index.html</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            console.log ('iniciando o script')
+            const folders = document.querySelectorAll('[wm-folder]').forEach(
+                (folder) => {
+                    folder.onclick = () => {
+                        folder.nextElementSibling.style.display = folder.nextElementSibling.style.display == 'none' ? 'block' : 'none'
+                    
+                    }
+                }
+            );
+        </script>
+</body>
+</html>

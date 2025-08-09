@@ -1,0 +1,173 @@
+function roundGrade(grade) {
+
+    if (grade < 38) {
+        return grade
+    }
+
+    if (grade % 5 > 2) {
+        return grade + (5 - grade % 5)
+    } else {
+        return grade - (5 - grade % 5)
+    }
+
+    return grade
+
+}
+
+function enterGrade(grade) {
+
+    if (grade < 0 || grade > 100) {
+        return `Grade ${grade} is invalid`
+    }
+
+    result = roundGrade(grade);
+
+    if (result >= 40) {
+        return `Student approved (${result})`
+    } else {
+        return `Student failed (${result})`
+    }
+
+}
+
+console.log(enterGrade(110))
+
+console.log(enterGrade(37))
+
+console.log(enterGrade(38))
+
+console.log(enterGrade(51))
+
+console.log(enterGrade(59))
+
+function isDivisibleBy3 (value) {
+
+    return value  % 3 == 0
+
+}
+
+console.log(isDivisibleBy3 (1))
+
+console.log(isDivisibleBy3 (5))
+
+console.log(isDivisibleBy3 (6))
+
+function isLeapYear(year) {
+
+    if (year % 400 == 0) {
+        return true
+    } else if (year % 100 == 0) {
+        return true
+    } else if (year % 4 == 0 ) {
+        return true
+    } else {
+        return false
+    }
+
+}
+
+console.log (isLeapYear(800))
+console.log (isLeapYear(700))
+console.log (isLeapYear(2020))
+console.log (isLeapYear(2021))
+
+function factorial(number) {
+    if(number == 1) {
+        return 1;
+    }
+
+    let result = 1
+
+    for(let i = number; i > 1; i--) {
+        result *= i
+    }
+
+    return result
+}
+
+console.log(factorial(1))
+console.log(factorial(2))
+console.log(factorial(3))
+console.log(factorial(4))
+console.log(factorial(5))
+console.log(factorial(6))
+
+
+function isWeekday(day) {
+    switch (day) {
+        case 1: 
+        case 7:
+            return 'Weekend'
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            return 'Weekday'
+    }
+}
+
+console.log(isWeekday(6));
+console.log(isWeekday(7));
+
+function executeOperation (a, b, operation) {
+    switch (operation) {
+        case "sum":
+            return a+b
+        case "minus":
+            return a-b
+        case "multiply":
+            return a*b
+        case "division":
+            return a/b
+        default:
+            return "Error"
+    }
+
+}
+
+console.log (executeOperation(10,5,"sum"))
+console.log (executeOperation(10,5,"minus"))
+console.log (executeOperation(10,5,"multiply"))
+console.log (executeOperation(10,5,"division"))
+
+function calculateSalaryIncrease (plan, salary) {
+    switch  (plan) {
+        case 'A':
+            return salary * 1.1
+        case 'B':
+            return salary * 1.15
+        case 'C':
+            return salary * 1.20
+        default:
+            return 'invalid plan'
+
+    }
+}
+
+console.log(calculateSalaryIncrease('A', 100).toFixed(2))
+console.log(calculateSalaryIncrease('B', 200).toFixed(2))
+console.log(calculateSalaryIncrease('C', 1000).toFixed(2))
+
+function quantityOfBanknotes(value) {
+
+    let remaining = value
+
+    let count100 = 0
+    let count50 = 0
+    let count10 = 0
+    let count5 = 0
+    let count1 = 0
+    
+    while (remaining > 0) {
+
+
+
+    }
+    
+
+}
+
+function calculateNumberBanknotes(withdraw) {
+    if (withdraw >= 0) 
+}

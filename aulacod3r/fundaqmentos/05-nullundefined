@@ -1,0 +1,27 @@
+//valor de objeto é passado por referência
+//ou seja, se eu alterar o valor de um objeto, ele será alterado em todas
+//as variáveis que referenciam aquele objeto
+
+const a = {
+    name: "um nome"
+}
+const b = a;
+
+let c = null ;
+console.log(a, b, c);
+
+b.name = "outro nome";
+
+console.log(a, b, c);
+
+function teste(value) {
+    value.name = "segundo nome"
+    console.log(value);
+
+}
+
+teste(a);
+
+console.log(a, b, c);
+
+console.log(typeof null);
