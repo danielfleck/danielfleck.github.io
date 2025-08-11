@@ -14,7 +14,7 @@ body {
     font-family: 'Roboto', sans-serif; 
     font-size: 1.15em;
     line-height: 1.6;
-    margin: 0;
+    margin: 20px;
 }
 
 .titulo-principal {
@@ -37,9 +37,10 @@ body {
 .titulo {         
     font-weight: bold;            
     text-transform: uppercase; 
-    background-image: linear-gradient(#87CEEB, #1E90FF);
+    background-image: linear-gradient(#1E90FF, #141464);
     /* border-radius: 4px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .texto {
@@ -61,7 +62,7 @@ a {
 /* Estilo para links quando o mouse passa por cima (hover) */
 a:hover {
     color: #0056b3; /* Um tom de azul mais escuro ao passar o mouse */
-    text-decoration: underline; /* Adiciona o sublinhado de volta ao passar o mouse */
+    text-decoration: none; /* Adiciona o sublinhado de volta ao passar o mouse */
 }
 
 /* Estilo para links quando estão sendo clicados (active) */
@@ -72,7 +73,7 @@ a:active {
 /* Estilo para links que já foram visitados (visited) */
 a:visited {
     text-decoration: none; /* Remove o sublinhado padrão do link */
-    color: #6610f2; /* Um tom de roxo/magenta para links visitados (opcional, pode ser o mesmo do padrão) */
+    color: #641432; /* Um tom de roxo/magenta para links visitados (opcional, pode ser o mesmo do padrão) */
 }
 
 blockquote {

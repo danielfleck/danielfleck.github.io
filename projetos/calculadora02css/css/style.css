@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.largura-padrao {
+    width: 200px;
+}
+
+[x-calculadora] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 2px;
+    padding: 20px;
+    width: 240px;
+    
+}
+
+[x-display] {
+    border: solid black 2px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding-right: 2px;
+    text-align: right;
+    align-content: center;
+}
+
+[x-botoes] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    border: solid 2px black;
+
+    user-select: none;
+    -webkit-user-select: none; /* Para navegadores WebKit/Blink (Chrome, Safari, Edge) */
+    -moz-user-select: none; /* Para o Firefox */
+    -ms-user-select: none; /* Para o Internet Explorer */
+    
+}
+
+[x-botao] {
+    border: solid 2px black;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.numero {
+    color: black;
+    background-color: lightgray;
+}
+
+.numero:hover {
+    background-color: #555;
+}
+
+.operacao {
+    background-color: lightgreen;
+}
+
+.operacao:hover {
+    background-color: green;
+}
+
+.limpar {
+    background-color: lightsalmon;
+}
+
+.limpar:hover {
+    background-color: brown;
+}
+
+.numero:active, .operacao:active, .limpar:active {
+    color: black;
+    box-shadow: 3px 3px 3px #444 ;
+}

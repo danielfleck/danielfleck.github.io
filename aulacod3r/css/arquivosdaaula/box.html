@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        .c1 {
+            padding: 40px;
+            border: solid 10px black; 
+            box-sizing: content-box;
+            width: 100%;
+            font-size: 30px;
+        }
+
+        .c2 {
+            padding: 100vh;
+            border: solid 10px black; 
+            box-sizing: border-box;
+            width: 100%
+        }
+
+        .c4 {
+            font-size: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">1<div class="c4">4</div></div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+</body>
+
+</html>
