@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>Elemento</div>
+    <script>
+
+        const div = document.querySelector('div')
+        div.style.position = 'absolute'
+        div.style['user-select'] = 'none'
+
+        function mover(evento) {
+
+            // console.log ('função evento', evento)
+
+            const elemento = evento.target
+
+            elemento.style.cursor = 'move'
+
+            if (evento.buttons) {
+
+                console.log(`${evento.clientY}px`)
+
+                elemento.style.top = `${evento.clientY - elemento.clientHeight/2}px`
+                elemento.style.left = `${evento.clientX - elemento.clientWidth/2}px`
+            } 
+
+        }
+
+        div.addEventListener('mousemove', mover)
+
+
+    </script>
+</body>
