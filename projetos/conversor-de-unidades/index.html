@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Conversor de Medidas</title>
+</head>
+
+<body>
+    <main id="conversor">
+        <h1>Conversor de medidas</h1>
+
+        <section>
+            <label for="quantidade">Digite a quantidade:</label>
+                <input id="quantidade" type="number" value="0" autofocus>
+        </section>
+
+        <section>
+            <label for="medida-de">De:</label>
+                <select name="" id="medida-de">
+                    <option value="quilometro">Quilometro</option>
+                    <option value="metro" selected>Metro</option>
+                    <option value="centimetro">Centimetro</option>
+
+                </select>
+
+        </section>
+
+        <section>
+            <label for="medida-para">Para:</label>
+                <select name="" id="medida-para">
+                    <option value="quilometro">Quilômetro</option>
+                    <option value="metro" selected>Metro</option>
+                    <option value="centimetro">Centimetro</option>
+
+                </select>
+
+        </section>
+
+        <section>
+            <button id="botao-converter">Converter</button>
+        </section>
+
+        <section>
+            <label for="resultado">Resultado:</label>
+                <input id="resultado" type="number" value="0" readonly>
+  
+        </section>
+
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
